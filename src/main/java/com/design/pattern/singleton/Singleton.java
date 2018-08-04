@@ -1,7 +1,7 @@
 package com.design.pattern.singleton;
 
 public class Singleton {
-    private Singleton singleton;
+    private static Singleton singleton;
 
     private Singleton() {
     }
@@ -9,7 +9,7 @@ public class Singleton {
     /*
     双重判断机制
      */
-    public Singleton getSingleton() {
+    public static Singleton getSingleton() {
         if (singleton == null) {
             synchronized (Singleton.class) {
                 if (singleton == null) {
